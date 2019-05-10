@@ -17,7 +17,8 @@ CREATE COMPUTE MODULE BuscarTodos_Request_Response_Compute
 --				SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[A] = CACHE.Funcionarios[A];
 --				SET A = A + 1;
 --			END WHILE;
-
+			
+			-- leitura do cache
 			SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[] = (
 				SELECT A
 				FROM CACHE.Funcionarios[] AS A
@@ -26,33 +27,32 @@ CREATE COMPUTE MODULE BuscarTodos_Request_Response_Compute
 			RETURN TRUE;
 		END IF;
 		
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[1].ns:Cargo = 'Desenvolvedor de Software';
+		-- mock do resultado, depois grava no cache
+		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[1].ns:Cargo = 'Dev';
 		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[1].ns:DataFim = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
 		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[1].ns:DataInicio = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
 		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[1].ns:DataNascimento = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
 		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[1].ns:IdFuncionario = 1;
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[1].ns:IdPessoa = 33;
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[1].ns:Nome = 'Ágabo';
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[1].ns:SobreNome = 'Pinho';
+		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[1].ns:Nome = 'Dev1';
+		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[1].ns:SobreNome = 'Tech';
 		
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[2].ns:Cargo = 'Gerente Getal';
+		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[2].ns:Cargo = 'Dev';
 		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[2].ns:DataFim = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
 		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[2].ns:DataInicio = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
 		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[2].ns:DataNascimento = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
 		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[2].ns:IdFuncionario = 2;
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[2].ns:IdPessoa = 34;
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[2].ns:Nome = 'Lucas';
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[2].ns:SobreNome = 'Silva';
+		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[2].ns:Nome = 'Dev2';
+		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[2].ns:SobreNome = 'Tech';
 		
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:Cargo = 'Desenvolvedor de Software Jr';
+		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:Cargo = 'Dev';
 		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:DataFim = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
 		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:DataInicio = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
 		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:DataNascimento = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:IdFuncionario =31;
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:IdPessoa = 34;
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:Nome = 'Lucas';
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:SobreNome = 'Silva';
-
+		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:IdFuncionario = 3;
+		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:Nome = 'Dev3';
+		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:SobreNome = 'Tech';
+         
+        -- cache
   		SET CACHE.Funcionarios[] = OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[];
   		
 		RETURN TRUE;
