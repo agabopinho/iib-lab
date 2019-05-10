@@ -9,15 +9,7 @@ CREATE COMPUTE MODULE BuscarTodos_Request_Response_Compute
 		-- CALL CopyMessageHeaders();
 		-- CALL CopyEntireMessage();
 		
-		IF FIELDNAME(CACHE.Funcionarios.*[1]) IS NOT NULL THEN
---			DECLARE B INTEGER CARDINALITY(CACHE.Funcionarios[]);
---			DECLARE A INTEGER 1;
---			
---			WHILE A <= B DO
---				SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[A] = CACHE.Funcionarios[A];
---				SET A = A + 1;
---			END WHILE;
-			
+		IF FIELDNAME(CACHE.Funcionarios.*[1]) IS NOT NULL THEN			
 			-- leitura do cache
 			SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[] = (
 				SELECT A

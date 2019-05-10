@@ -10,22 +10,6 @@
     <complexType baseType="mlib://IIBLabInterfaces#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/IIBLabInterfaces/IBMdefined/soap.xsd#//SOAP_Msg_type;XSDComplexTypeDefinition=2" name="SOAP_Msg_type"/>
     <group href="platform:/resource/IIBLabInterfaces/IBMdefined/soap.xsd#//MIME_header_fields;XSDModelGroupDefinition" name="MIME_header_fields"/>
   </XSDCollection>
-  <XSDCollection href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd" prefix="tns" targetNamespace="http://indracompany.com/funcionario">
-    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//BuscarTodos;XSDElementDeclaration" name="BuscarTodos"/>
-    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//BuscarTodosResponse;XSDElementDeclaration=1" name="BuscarTodosResponse"/>
-    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//ArrayOfFuncionario;XSDElementDeclaration=2" name="ArrayOfFuncionario" type="mlib://IIBLabInterfaces#/-/complexType{http://indracompany.com/funcionario}ArrayOfFuncionario"/>
-    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//Funcionario;XSDElementDeclaration=3" name="Funcionario" type="mlib://IIBLabInterfaces#/-/complexType{http://indracompany.com/funcionario}Funcionario"/>
-    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//BuscarPorId;XSDElementDeclaration=4" name="BuscarPorId"/>
-    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//BuscarPorIdResponse;XSDElementDeclaration=5" name="BuscarPorIdResponse"/>
-    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//Criar;XSDElementDeclaration=6" name="Criar"/>
-    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//CriarResponse;XSDElementDeclaration=7" name="CriarResponse"/>
-    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//Atualizar;XSDElementDeclaration=8" name="Atualizar"/>
-    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//AtualizarResponse;XSDElementDeclaration=9" name="AtualizarResponse"/>
-    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//Deletar;XSDElementDeclaration=10" name="Deletar"/>
-    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//DeletarResponse;XSDElementDeclaration=11" name="DeletarResponse"/>
-    <complexType baseType="mlib://IIBLabInterfaces#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//ArrayOfFuncionario;XSDComplexTypeDefinition" name="ArrayOfFuncionario"/>
-    <complexType baseType="mlib://IIBLabInterfaces#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//Funcionario;XSDComplexTypeDefinition=1" name="Funcionario"/>
-  </XSDCollection>
   <XSDCollection href="platform:/resource/IIBLabInterfaces/IBMdefined/org/xmlsoap/schemas/soap/envelope/soapenv11.xsd" prefix="tns" targetNamespace="http://schemas.xmlsoap.org/soap/envelope/">
     <import name="IBMdefined/org/w3/www/xml/_1998/namespace/xml.xsd" targetNamespace="http://www.w3.org/XML/1998/namespace"/>
     <element href="platform:/resource/IIBLabInterfaces/IBMdefined/org/xmlsoap/schemas/soap/envelope/soapenv11.xsd#//Envelope;XSDElementDeclaration" name="Envelope" type="mlib://IIBLabInterfaces#/-/complexType{http://schemas.xmlsoap.org/soap/envelope/}Envelope"/>
@@ -78,5 +62,24 @@
     <attribute href="platform:/resource/IIBLabInterfaces/IBMdefined/org/w3/www/xml/_1998/namespace/xml.xsd#//space;XSDAttributeDeclaration=1" name="space"/>
     <attribute href="platform:/resource/IIBLabInterfaces/IBMdefined/org/w3/www/xml/_1998/namespace/xml.xsd#//base;XSDAttributeDeclaration=2" name="base"/>
     <attributeGroup href="platform:/resource/IIBLabInterfaces/IBMdefined/org/w3/www/xml/_1998/namespace/xml.xsd#//specialAttrs;XSDAttributeGroupDefinition" name="specialAttrs"/>
+  </XSDCollection>
+  <XSDCollection href="platform:/resource/IIBLabInterfaces/FuncionarioServico.wsdl" prefix="tns" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/">
+    <include name="/IIBLabInterfaces/FuncionarioServico_InlineSchema2.xsd" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  </XSDCollection>
+  <XSDCollection href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd" prefix="tns" targetNamespace="http://indracompany.com/funcionario">
+    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//BuscarTodos;XSDElementDeclaration" name="BuscarTodos"/>
+    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//BuscarTodosResponse;XSDElementDeclaration=1" name="BuscarTodosResponse"/>
+    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//ArrayOfFuncionario;XSDElementDeclaration=2" name="ArrayOfFuncionario" type="mlib://IIBLabInterfaces#/-/complexType{http://indracompany.com/funcionario}ArrayOfFuncionario"/>
+    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//Funcionario;XSDElementDeclaration=3" name="Funcionario" type="mlib://IIBLabInterfaces#/-/complexType{http://indracompany.com/funcionario}Funcionario"/>
+    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//BuscarPorId;XSDElementDeclaration=4" name="BuscarPorId"/>
+    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//BuscarPorIdResponse;XSDElementDeclaration=5" name="BuscarPorIdResponse"/>
+    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//Criar;XSDElementDeclaration=6" name="Criar"/>
+    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//CriarResponse;XSDElementDeclaration=7" name="CriarResponse"/>
+    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//Atualizar;XSDElementDeclaration=8" name="Atualizar"/>
+    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//AtualizarResponse;XSDElementDeclaration=9" name="AtualizarResponse"/>
+    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//Deletar;XSDElementDeclaration=10" name="Deletar"/>
+    <element href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//DeletarResponse;XSDElementDeclaration=11" name="DeletarResponse"/>
+    <complexType baseType="mlib://IIBLabInterfaces#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//ArrayOfFuncionario;XSDComplexTypeDefinition" name="ArrayOfFuncionario"/>
+    <complexType baseType="mlib://IIBLabInterfaces#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd#//Funcionario;XSDComplexTypeDefinition=1" name="Funcionario"/>
   </XSDCollection>
 </MessageBroker>

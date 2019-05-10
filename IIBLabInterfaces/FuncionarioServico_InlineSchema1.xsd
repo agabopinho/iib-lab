@@ -24,7 +24,7 @@
       <xs:element minOccurs="0" name="DataInicio" type="xs:dateTime"/>
       <xs:element minOccurs="0" name="DataNascimento" type="xs:dateTime"/>
       <xs:element minOccurs="0" name="IdFuncionario" type="xs:int"/>
-      <xs:element minOccurs="0" name="IdPessoa" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="IdPessoa" nillable="true" type="xs:int"/>
       <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string"/>
       <xs:element minOccurs="0" name="SobreNome" nillable="true" type="xs:string"/>
     </xs:sequence>
