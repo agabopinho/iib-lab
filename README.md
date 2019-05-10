@@ -7,7 +7,7 @@
 
 ```json
 {
-  "id": int,
+  "id": "int",
   "firtName": "string",
   "lastName": "string",
   "birthDate": "date",
