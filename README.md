@@ -11,7 +11,7 @@
   "firtName": "string",
   "lastName": "string",
   "birthDate": "date",
-  "contracts: [
+  "contracts": [
     {
       "startDate": "date",
       "endDate": "date",
