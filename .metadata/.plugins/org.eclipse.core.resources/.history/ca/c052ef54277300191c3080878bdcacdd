@@ -1,0 +1,8 @@
+
+
+Importing file: C:\Users\aduarte\IBM\IIBT10\iib-lab\src\FuncionarioServico.wsdl
+
+Parsing wsdl binding {http://indracompany.com/funcionario}BasicHttpBinding_IFuncionarioServico.
+Parsing wsdl binding input BuscarTodos.
+Parsing wsdl binding output BuscarTodos.
+Parsing wsdl binding input BuscarPorId.

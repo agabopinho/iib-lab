@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1557494009056_1" label="[IIBLabInterfaces]" name="[IIBLabInterfaces]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/IIBLabInterfaces" type="4"/>
+</workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1557494926192_2" label="[IIBLabIntegrationServicde]" name="[IIBLabIntegrationServicde]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/IIBLabIntegrationServicde" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1557444693498_0" label="Window Working Set" name="Aggregate for window 1557444693498"/>
 </workingSetManager>
