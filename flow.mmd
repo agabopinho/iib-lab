@@ -13,9 +13,11 @@ sequenceDiagram
     alt mapping
         Api->>Api: JSON to SOAP
     end
-    Api->>+Soap: call soap (rpc)
-    Soap-->>Soap: search/update IIB Cache
-    Soap-->>-Api: return result
+    Api->>+Soap: soap request
+    alt rpc
+        Soap->>Soap: get, create, update and delete
+    end
+    Soap-->>-Api: soap result
     alt mapping
         Api->>Api: SOAP to JSON
     end
