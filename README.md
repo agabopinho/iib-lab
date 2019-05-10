@@ -20,7 +20,7 @@
   ]
 }
 ```
-### SOAP 
+### SOAP contract
 
 ```xml
 <funcionario>
@@ -28,9 +28,9 @@
   <idPessoa></idPessoa>
   <nome></nome>
   <sobrenome></sobrenome>
-  <dataNascimento></dataNascimento>
+  <dataNascimento>yyyy-MM-dd</dataNascimento>
   <dataInicio>yyyy-MM-dd</dataInicio>
-  <dataFim></dataFim>
+  <dataFim>yyyy-MM-dd</dataFim>
   <cargo></cargo>
 </funcionario>
 ```
