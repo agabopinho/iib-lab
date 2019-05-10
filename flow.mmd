@@ -15,7 +15,7 @@ sequenceDiagram
     end
     API->>+SOAP: SOAP request
     alt rpc
-        SOAP->>SOAP: get, create, update and delete
+        SOAP->>SOAP: get, getAll, create, update and delete
     end
     SOAP-->>-API: SOAP result
     alt mapping
