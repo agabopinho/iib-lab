@@ -1,7 +1,7 @@
 BROKER SCHEMA gen
 DECLARE ns NAMESPACE 'http://indracompany.com/funcionario';
 
-
+DECLARE 
 CREATE COMPUTE MODULE BuscarTodos_Request_Response_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
