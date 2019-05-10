@@ -3,7 +3,7 @@
 ### flow
 <img src="flow.svg" alt="flow diagram" style="max-width:100%;" />
 
-### payload
+### JSON payload
 
 ```json
 {
@@ -19,4 +19,18 @@
     }
   ]
 }
+```
+### SOAP 
+
+```xml
+<funcionario>
+  <idFuncionario></idFuncionario>
+  <idPessoa></idPessoa>
+  <nome></nome>
+  <sobrenome></sobrenome>
+  <dataNascimento></dataNascimento>
+  <dataInicio>yyyy-MM-dd</dataInicio>
+  <dataFim></dataFim>
+  <cargo></cargo>
+</funcionario>
 ```
