@@ -21,6 +21,7 @@ sequenceDiagram
     alt mapping
         API->>API: SOAP to JSON
     end
-    API-->>-CLIENT: 200 Ok, 201 Created, 202 Accepted, 404 Not Found
+    API-->>-CLIENT: http result
+    Note over API,CLIENT: payload: JSON<br>http status: 200 OK, 201 Created,<br>202 Accepted, 404 Not Found,<br>405 Method not allowed
     Note right of SOAP: legacy role
     Note over API,SOAP: IBM Integration Bus

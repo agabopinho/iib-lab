@@ -1,40 +1,40 @@
-<svg id="mermaid-1557453298818" width="100%" xmlns="http://www.w3.org/2000/svg" height="100%" style="max-width:750px;" viewBox="-50 -10 750 1026"><style>
+<svg id="mermaid-1557453812992" width="100%" xmlns="http://www.w3.org/2000/svg" height="100%" style="max-width:750px;" viewBox="-50 -10 750 1042"><style>
 
 
-#mermaid-1557453298818 .label {
+#mermaid-1557453812992 .label {
   font-family: 'trebuchet ms', verdana, arial;
   color: #333; }
 
-#mermaid-1557453298818 .node rect,
-#mermaid-1557453298818 .node circle,
-#mermaid-1557453298818 .node ellipse,
-#mermaid-1557453298818 .node polygon {
+#mermaid-1557453812992 .node rect,
+#mermaid-1557453812992 .node circle,
+#mermaid-1557453812992 .node ellipse,
+#mermaid-1557453812992 .node polygon {
   fill: #ECECFF;
   stroke: #9370DB;
   stroke-width: 1px; }
 
-#mermaid-1557453298818 .node.clickable {
+#mermaid-1557453812992 .node.clickable {
   cursor: pointer; }
 
-#mermaid-1557453298818 .arrowheadPath {
+#mermaid-1557453812992 .arrowheadPath {
   fill: #333333; }
 
-#mermaid-1557453298818 .edgePath .path {
+#mermaid-1557453812992 .edgePath .path {
   stroke: #333333;
   stroke-width: 1.5px; }
 
-#mermaid-1557453298818 .edgeLabel {
+#mermaid-1557453812992 .edgeLabel {
   background-color: #e8e8e8; }
 
-#mermaid-1557453298818 .cluster rect {
+#mermaid-1557453812992 .cluster rect {
   fill: #ffffde !important;
   stroke: #aaaa33 !important;
   stroke-width: 1px !important; }
 
-#mermaid-1557453298818 .cluster text {
+#mermaid-1557453812992 .cluster text {
   fill: #333; }
 
-#mermaid-1557453298818 div.mermaidTooltip {
+#mermaid-1557453812992 div.mermaidTooltip {
   position: absolute;
   text-align: center;
   max-width: 200px;
@@ -47,314 +47,314 @@
   pointer-events: none;
   z-index: 100; }
 
-#mermaid-1557453298818 .actor {
+#mermaid-1557453812992 .actor {
   stroke: #CCCCFF;
   fill: #ECECFF; }
 
-#mermaid-1557453298818 text.actor {
+#mermaid-1557453812992 text.actor {
   fill: black;
   stroke: none; }
 
-#mermaid-1557453298818 .actor-line {
+#mermaid-1557453812992 .actor-line {
   stroke: grey; }
 
-#mermaid-1557453298818 .messageLine0 {
+#mermaid-1557453812992 .messageLine0 {
   stroke-width: 1.5;
   stroke-dasharray: '2 2';
   stroke: #333; }
 
-#mermaid-1557453298818 .messageLine1 {
+#mermaid-1557453812992 .messageLine1 {
   stroke-width: 1.5;
   stroke-dasharray: '2 2';
   stroke: #333; }
 
-#mermaid-1557453298818 #arrowhead {
+#mermaid-1557453812992 #arrowhead {
   fill: #333; }
 
-#mermaid-1557453298818 #crosshead path {
+#mermaid-1557453812992 #crosshead path {
   fill: #333 !important;
   stroke: #333 !important; }
 
-#mermaid-1557453298818 .messageText {
+#mermaid-1557453812992 .messageText {
   fill: #333;
   stroke: none; }
 
-#mermaid-1557453298818 .labelBox {
+#mermaid-1557453812992 .labelBox {
   stroke: #CCCCFF;
   fill: #ECECFF; }
 
-#mermaid-1557453298818 .labelText {
+#mermaid-1557453812992 .labelText {
   fill: black;
   stroke: none; }
 
-#mermaid-1557453298818 .loopText {
+#mermaid-1557453812992 .loopText {
   fill: black;
   stroke: none; }
 
-#mermaid-1557453298818 .loopLine {
+#mermaid-1557453812992 .loopLine {
   stroke-width: 2;
   stroke-dasharray: '2 2';
   stroke: #CCCCFF; }
 
-#mermaid-1557453298818 .note {
+#mermaid-1557453812992 .note {
   stroke: #aaaa33;
   fill: #fff5ad; }
 
-#mermaid-1557453298818 .noteText {
+#mermaid-1557453812992 .noteText {
   fill: black;
   stroke: none;
   font-family: 'trebuchet ms', verdana, arial;
   font-size: 14px; }
 
-#mermaid-1557453298818 .activation0 {
+#mermaid-1557453812992 .activation0 {
   fill: #f4f4f4;
   stroke: #666; }
 
-#mermaid-1557453298818 .activation1 {
+#mermaid-1557453812992 .activation1 {
   fill: #f4f4f4;
   stroke: #666; }
 
-#mermaid-1557453298818 .activation2 {
+#mermaid-1557453812992 .activation2 {
   fill: #f4f4f4;
   stroke: #666; }
 
 
-#mermaid-1557453298818 .section {
+#mermaid-1557453812992 .section {
   stroke: none;
   opacity: 0.2; }
 
-#mermaid-1557453298818 .section0 {
+#mermaid-1557453812992 .section0 {
   fill: rgba(102, 102, 255, 0.49); }
 
-#mermaid-1557453298818 .section2 {
+#mermaid-1557453812992 .section2 {
   fill: #fff400; }
 
-#mermaid-1557453298818 .section1,
-#mermaid-1557453298818 .section3 {
+#mermaid-1557453812992 .section1,
+#mermaid-1557453812992 .section3 {
   fill: white;
   opacity: 0.2; }
 
-#mermaid-1557453298818 .sectionTitle0 {
+#mermaid-1557453812992 .sectionTitle0 {
   fill: #333; }
 
-#mermaid-1557453298818 .sectionTitle1 {
+#mermaid-1557453812992 .sectionTitle1 {
   fill: #333; }
 
-#mermaid-1557453298818 .sectionTitle2 {
+#mermaid-1557453812992 .sectionTitle2 {
   fill: #333; }
 
-#mermaid-1557453298818 .sectionTitle3 {
+#mermaid-1557453812992 .sectionTitle3 {
   fill: #333; }
 
-#mermaid-1557453298818 .sectionTitle {
+#mermaid-1557453812992 .sectionTitle {
   text-anchor: start;
   font-size: 11px;
   text-height: 14px; }
 
 
-#mermaid-1557453298818 .grid .tick {
+#mermaid-1557453812992 .grid .tick {
   stroke: lightgrey;
   opacity: 0.3;
   shape-rendering: crispEdges; }
 
-#mermaid-1557453298818 .grid path {
+#mermaid-1557453812992 .grid path {
   stroke-width: 0; }
 
 
-#mermaid-1557453298818 .today {
+#mermaid-1557453812992 .today {
   fill: none;
   stroke: red;
   stroke-width: 2px; }
 
 
 
-#mermaid-1557453298818 .task {
+#mermaid-1557453812992 .task {
   stroke-width: 2; }
 
-#mermaid-1557453298818 .taskText {
+#mermaid-1557453812992 .taskText {
   text-anchor: middle;
   font-size: 11px; }
 
-#mermaid-1557453298818 .taskTextOutsideRight {
+#mermaid-1557453812992 .taskTextOutsideRight {
   fill: black;
   text-anchor: start;
   font-size: 11px; }
 
-#mermaid-1557453298818 .taskTextOutsideLeft {
+#mermaid-1557453812992 .taskTextOutsideLeft {
   fill: black;
   text-anchor: end;
   font-size: 11px; }
 
 
-#mermaid-1557453298818 .taskText0,
-#mermaid-1557453298818 .taskText1,
-#mermaid-1557453298818 .taskText2,
-#mermaid-1557453298818 .taskText3 {
+#mermaid-1557453812992 .taskText0,
+#mermaid-1557453812992 .taskText1,
+#mermaid-1557453812992 .taskText2,
+#mermaid-1557453812992 .taskText3 {
   fill: white; }
 
-#mermaid-1557453298818 .task0,
-#mermaid-1557453298818 .task1,
-#mermaid-1557453298818 .task2,
-#mermaid-1557453298818 .task3 {
+#mermaid-1557453812992 .task0,
+#mermaid-1557453812992 .task1,
+#mermaid-1557453812992 .task2,
+#mermaid-1557453812992 .task3 {
   fill: #8a90dd;
   stroke: #534fbc; }
 
-#mermaid-1557453298818 .taskTextOutside0,
-#mermaid-1557453298818 .taskTextOutside2 {
+#mermaid-1557453812992 .taskTextOutside0,
+#mermaid-1557453812992 .taskTextOutside2 {
   fill: black; }
 
-#mermaid-1557453298818 .taskTextOutside1,
-#mermaid-1557453298818 .taskTextOutside3 {
+#mermaid-1557453812992 .taskTextOutside1,
+#mermaid-1557453812992 .taskTextOutside3 {
   fill: black; }
 
 
-#mermaid-1557453298818 .active0,
-#mermaid-1557453298818 .active1,
-#mermaid-1557453298818 .active2,
-#mermaid-1557453298818 .active3 {
+#mermaid-1557453812992 .active0,
+#mermaid-1557453812992 .active1,
+#mermaid-1557453812992 .active2,
+#mermaid-1557453812992 .active3 {
   fill: #bfc7ff;
   stroke: #534fbc; }
 
-#mermaid-1557453298818 .activeText0,
-#mermaid-1557453298818 .activeText1,
-#mermaid-1557453298818 .activeText2,
-#mermaid-1557453298818 .activeText3 {
+#mermaid-1557453812992 .activeText0,
+#mermaid-1557453812992 .activeText1,
+#mermaid-1557453812992 .activeText2,
+#mermaid-1557453812992 .activeText3 {
   fill: black !important; }
 
 
-#mermaid-1557453298818 .done0,
-#mermaid-1557453298818 .done1,
-#mermaid-1557453298818 .done2,
-#mermaid-1557453298818 .done3 {
+#mermaid-1557453812992 .done0,
+#mermaid-1557453812992 .done1,
+#mermaid-1557453812992 .done2,
+#mermaid-1557453812992 .done3 {
   stroke: grey;
   fill: lightgrey;
   stroke-width: 2; }
 
-#mermaid-1557453298818 .doneText0,
-#mermaid-1557453298818 .doneText1,
-#mermaid-1557453298818 .doneText2,
-#mermaid-1557453298818 .doneText3 {
+#mermaid-1557453812992 .doneText0,
+#mermaid-1557453812992 .doneText1,
+#mermaid-1557453812992 .doneText2,
+#mermaid-1557453812992 .doneText3 {
   fill: black !important; }
 
 
-#mermaid-1557453298818 .crit0,
-#mermaid-1557453298818 .crit1,
-#mermaid-1557453298818 .crit2,
-#mermaid-1557453298818 .crit3 {
+#mermaid-1557453812992 .crit0,
+#mermaid-1557453812992 .crit1,
+#mermaid-1557453812992 .crit2,
+#mermaid-1557453812992 .crit3 {
   stroke: #ff8888;
   fill: red;
   stroke-width: 2; }
 
-#mermaid-1557453298818 .activeCrit0,
-#mermaid-1557453298818 .activeCrit1,
-#mermaid-1557453298818 .activeCrit2,
-#mermaid-1557453298818 .activeCrit3 {
+#mermaid-1557453812992 .activeCrit0,
+#mermaid-1557453812992 .activeCrit1,
+#mermaid-1557453812992 .activeCrit2,
+#mermaid-1557453812992 .activeCrit3 {
   stroke: #ff8888;
   fill: #bfc7ff;
   stroke-width: 2; }
 
-#mermaid-1557453298818 .doneCrit0,
-#mermaid-1557453298818 .doneCrit1,
-#mermaid-1557453298818 .doneCrit2,
-#mermaid-1557453298818 .doneCrit3 {
+#mermaid-1557453812992 .doneCrit0,
+#mermaid-1557453812992 .doneCrit1,
+#mermaid-1557453812992 .doneCrit2,
+#mermaid-1557453812992 .doneCrit3 {
   stroke: #ff8888;
   fill: lightgrey;
   stroke-width: 2;
   cursor: pointer;
   shape-rendering: crispEdges; }
 
-#mermaid-1557453298818 .doneCritText0,
-#mermaid-1557453298818 .doneCritText1,
-#mermaid-1557453298818 .doneCritText2,
-#mermaid-1557453298818 .doneCritText3 {
+#mermaid-1557453812992 .doneCritText0,
+#mermaid-1557453812992 .doneCritText1,
+#mermaid-1557453812992 .doneCritText2,
+#mermaid-1557453812992 .doneCritText3 {
   fill: black !important; }
 
-#mermaid-1557453298818 .activeCritText0,
-#mermaid-1557453298818 .activeCritText1,
-#mermaid-1557453298818 .activeCritText2,
-#mermaid-1557453298818 .activeCritText3 {
+#mermaid-1557453812992 .activeCritText0,
+#mermaid-1557453812992 .activeCritText1,
+#mermaid-1557453812992 .activeCritText2,
+#mermaid-1557453812992 .activeCritText3 {
   fill: black !important; }
 
-#mermaid-1557453298818 .titleText {
+#mermaid-1557453812992 .titleText {
   text-anchor: middle;
   font-size: 18px;
   fill: black; }
 
-#mermaid-1557453298818 g.classGroup text {
+#mermaid-1557453812992 g.classGroup text {
   fill: #9370DB;
   stroke: none;
   font-family: 'trebuchet ms', verdana, arial;
   font-size: 10px; }
 
-#mermaid-1557453298818 g.classGroup rect {
+#mermaid-1557453812992 g.classGroup rect {
   fill: #ECECFF;
   stroke: #9370DB; }
 
-#mermaid-1557453298818 g.classGroup line {
+#mermaid-1557453812992 g.classGroup line {
   stroke: #9370DB;
   stroke-width: 1; }
 
-#mermaid-1557453298818 .classLabel .box {
+#mermaid-1557453812992 .classLabel .box {
   stroke: none;
   stroke-width: 0;
   fill: #ECECFF;
   opacity: 0.5; }
 
-#mermaid-1557453298818 .classLabel .label {
+#mermaid-1557453812992 .classLabel .label {
   fill: #9370DB;
   font-size: 10px; }
 
-#mermaid-1557453298818 .relation {
+#mermaid-1557453812992 .relation {
   stroke: #9370DB;
   stroke-width: 1;
   fill: none; }
 
-#mermaid-1557453298818 #compositionStart {
+#mermaid-1557453812992 #compositionStart {
   fill: #9370DB;
   stroke: #9370DB;
   stroke-width: 1; }
 
-#mermaid-1557453298818 #compositionEnd {
+#mermaid-1557453812992 #compositionEnd {
   fill: #9370DB;
   stroke: #9370DB;
   stroke-width: 1; }
 
-#mermaid-1557453298818 #aggregationStart {
+#mermaid-1557453812992 #aggregationStart {
   fill: #ECECFF;
   stroke: #9370DB;
   stroke-width: 1; }
 
-#mermaid-1557453298818 #aggregationEnd {
+#mermaid-1557453812992 #aggregationEnd {
   fill: #ECECFF;
   stroke: #9370DB;
   stroke-width: 1; }
 
-#mermaid-1557453298818 #dependencyStart {
+#mermaid-1557453812992 #dependencyStart {
   fill: #9370DB;
   stroke: #9370DB;
   stroke-width: 1; }
 
-#mermaid-1557453298818 #dependencyEnd {
+#mermaid-1557453812992 #dependencyEnd {
   fill: #9370DB;
   stroke: #9370DB;
   stroke-width: 1; }
 
-#mermaid-1557453298818 #extensionStart {
+#mermaid-1557453812992 #extensionStart {
   fill: #9370DB;
   stroke: #9370DB;
   stroke-width: 1; }
 
-#mermaid-1557453298818 #extensionEnd {
+#mermaid-1557453812992 #extensionEnd {
   fill: #9370DB;
   stroke: #9370DB;
   stroke-width: 1; }
 
-#mermaid-1557453298818 .commit-id,
-#mermaid-1557453298818 .commit-msg,
-#mermaid-1557453298818 .branch-label {
+#mermaid-1557453812992 .commit-id,
+#mermaid-1557453812992 .commit-msg,
+#mermaid-1557453812992 .branch-label {
   fill: lightgrey;
   color: lightgrey; }
-</style><style>#mermaid-1557453298818 {
+</style><style>#mermaid-1557453812992 {
     color: rgba(0, 0, 0, 0.65);
     font: ;
-  }</style><g></g><g><line id="actor9" x1="75" y1="5" x2="75" y2="1015" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;"><tspan x="75" dy="0">CLIENT</tspan></text></g><g><line id="actor10" x1="275" y1="5" x2="275" y2="1015" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="200" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="275" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;"><tspan x="275" dy="0">API</tspan></text></g><g><line id="actor11" x1="475" y1="5" x2="475" y2="1015" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="400" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="475" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;"><tspan x="475" dy="0">SOAP</tspan></text></g><defs><marker id="arrowhead" refX="5" refY="2" markerWidth="6" markerHeight="4" orient="auto"><path d="M 0,0 V 4 L6,2 Z"></path></marker></defs><defs><marker id="crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="16" refY="4"><path fill="black" stroke="#000000" stroke-width="1px" d="M 9,2 V 6 L16,4 Z" style="stroke-dasharray: 0, 0;"></path><path fill="none" stroke="#000000" stroke-width="1px" d="M 0,1 L 6,7 M 6,1 L 0,7" style="stroke-dasharray: 0, 0;"></path></marker></defs><g><text x="175" y="118" class="messageText" style="text-anchor: middle;">GET /employees</text><line x1="75" y1="125" x2="275" y2="125" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></line></g><g><text x="175" y="173" class="messageText" style="text-anchor: middle;">GET /employees/{id:int}</text><line x1="75" y1="180" x2="275" y2="180" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></line></g><g><text x="175" y="228" class="messageText" style="text-anchor: middle;">POST /employees</text><line x1="75" y1="235" x2="275" y2="235" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></line></g><g><text x="175" y="283" class="messageText" style="text-anchor: middle;">PUT /employees/{id:int}</text><line x1="75" y1="290" x2="275" y2="290" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></line></g><g><text x="175" y="338" class="messageText" style="text-anchor: middle;">DELETE /employees/{id:int}</text><line x1="75" y1="345" x2="275" y2="345" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></line></g><g><rect x="270" y="347" fill="#EDF2AE" stroke="#666" width="10" height="413" rx="0" ry="0" class="activation0"></rect></g><g><line x1="65" y1="75" x2="285" y2="75" class="loopLine"></line><line x1="285" y1="75" x2="285" y2="355" class="loopLine"></line><line x1="65" y1="355" x2="285" y2="355" class="loopLine"></line><line x1="65" y1="75" x2="65" y2="355" class="loopLine"></line><line x1="65" y1="135" x2="285" y2="135" class="loopLine" style="stroke-dasharray: 3, 3;"></line><line x1="65" y1="190" x2="285" y2="190" class="loopLine" style="stroke-dasharray: 3, 3;"></line><line x1="65" y1="245" x2="285" y2="245" class="loopLine" style="stroke-dasharray: 3, 3;"></line><line x1="65" y1="300" x2="285" y2="300" class="loopLine" style="stroke-dasharray: 3, 3;"></line><polygon points="65,75 115,75 115,88 106.6,95 65,95" class="labelBox"></polygon><text x="72.5" y="90" fill="black" class="labelText"><tspan x="72.5" fill="black">alt</tspan></text><text x="175" y="90" fill="black" class="loopText" style="text-anchor: middle;"><tspan x="175" fill="black">[ get all employees ]</tspan></text><text x="175" y="150" fill="black" class="loopText" style="text-anchor: middle;"><tspan x="175" fill="black">[ get employee by id ]</tspan></text><text x="175" y="205" fill="black" class="loopText" style="text-anchor: middle;"><tspan x="175" fill="black">[ create employee  ]</tspan></text><text x="175" y="260" fill="black" class="loopText" style="text-anchor: middle;"><tspan x="175" fill="black">[ update employee by id ]</tspan></text><text x="175" y="315" fill="black" class="loopText" style="text-anchor: middle;"><tspan x="175" fill="black">[ delete employee by id ]</tspan></text></g><g><text x="280" y="408" class="messageText" style="text-anchor: middle;">JSON to SOAP</text><path d="M 280,415 C 340,405 340,445 280,435" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></path></g><g><line x1="170" y1="365" x2="390" y2="365" class="loopLine"></line><line x1="390" y1="365" x2="390" y2="455" class="loopLine"></line><line x1="170" y1="455" x2="390" y2="455" class="loopLine"></line><line x1="170" y1="365" x2="170" y2="455" class="loopLine"></line><polygon points="170,365 220,365 220,378 211.6,385 170,385" class="labelBox"></polygon><text x="177.5" y="380" fill="black" class="labelText"><tspan x="177.5" fill="black">alt</tspan></text><text x="280" y="380" fill="black" class="loopText" style="text-anchor: middle;"><tspan x="280" fill="black">[ mapping ]</tspan></text></g><g><text x="377.5" y="483" class="messageText" style="text-anchor: middle;">SOAP request</text><line x1="280" y1="490" x2="475" y2="490" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></line></g><g><rect x="470" y="492" fill="#EDF2AE" stroke="#666" width="10" height="133" rx="0" ry="0" class="activation0"></rect></g><g><text x="480" y="543" class="messageText" style="text-anchor: middle;">get, create, update and delete</text><path d="M 480,550 C 540,540 540,580 480,570" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></path></g><g><line x1="370" y1="500" x2="590" y2="500" class="loopLine"></line><line x1="590" y1="500" x2="590" y2="590" class="loopLine"></line><line x1="370" y1="590" x2="590" y2="590" class="loopLine"></line><line x1="370" y1="500" x2="370" y2="590" class="loopLine"></line><polygon points="370,500 420,500 420,513 411.6,520 370,520" class="labelBox"></polygon><text x="377.5" y="515" fill="black" class="labelText"><tspan x="377.5" fill="black">alt</tspan></text><text x="480" y="515" fill="black" class="loopText" style="text-anchor: middle;"><tspan x="480" fill="black">[ rpc ]</tspan></text></g><g><text x="375" y="618" class="messageText" style="text-anchor: middle;">SOAP result</text><line x1="470" y1="625" x2="280" y2="625" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="stroke-dasharray: 3, 3; fill: none;"></line></g><g><text x="280" y="678" class="messageText" style="text-anchor: middle;">SOAP to JSON</text><path d="M 280,685 C 340,675 340,715 280,705" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></path></g><g><line x1="170" y1="635" x2="390" y2="635" class="loopLine"></line><line x1="390" y1="635" x2="390" y2="725" class="loopLine"></line><line x1="170" y1="725" x2="390" y2="725" class="loopLine"></line><line x1="170" y1="635" x2="170" y2="725" class="loopLine"></line><polygon points="170,635 220,635 220,648 211.6,655 170,655" class="labelBox"></polygon><text x="177.5" y="650" fill="black" class="labelText"><tspan x="177.5" fill="black">alt</tspan></text><text x="280" y="650" fill="black" class="loopText" style="text-anchor: middle;"><tspan x="280" fill="black">[ mapping ]</tspan></text></g><g><text x="172.5" y="753" class="messageText" style="text-anchor: middle;">http result</text><line x1="270" y1="760" x2="75" y2="760" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="stroke-dasharray: 3, 3; fill: none;"></line></g><g><rect x="50" y="770" fill="#EDF2AE" stroke="#666" width="250" height="68" rx="0" ry="0" class="note"></rect><text x="46" y="794" fill="black" class="noteText"><tspan x="66" fill="black">payload: JSON</tspan></text><text x="46" y="810" fill="black" class="noteText"><tspan x="66" fill="black">http status: 200 OK, 201 Created,</tspan></text><text x="46" y="826" fill="black" class="noteText"><tspan x="66" fill="black">202 Accepted, 404 Not Found</tspan></text></g><g><rect x="500" y="848" fill="#EDF2AE" stroke="#666" width="150" height="36" rx="0" ry="0" class="note"></rect><text x="496" y="872" fill="black" class="noteText"><tspan x="516" fill="black">legacy role</tspan></text></g><g><rect x="250" y="894" fill="#EDF2AE" stroke="#666" width="250" height="36" rx="0" ry="0" class="note"></rect><text x="246" y="918" fill="black" class="noteText"><tspan x="266" fill="black">IBM Integration Bus</tspan></text></g><g><rect x="0" y="950" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="982.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;"><tspan x="75" dy="0">CLIENT</tspan></text></g><g><rect x="200" y="950" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="275" y="982.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;"><tspan x="275" dy="0">API</tspan></text></g><g><rect x="400" y="950" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="475" y="982.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;"><tspan x="475" dy="0">SOAP</tspan></text></g></svg>
+  }</style><g></g><g><line id="actor12" x1="75" y1="5" x2="75" y2="1031" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;"><tspan x="75" dy="0">CLIENT</tspan></text></g><g><line id="actor13" x1="275" y1="5" x2="275" y2="1031" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="200" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="275" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;"><tspan x="275" dy="0">API</tspan></text></g><g><line id="actor14" x1="475" y1="5" x2="475" y2="1031" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="400" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="475" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;"><tspan x="475" dy="0">SOAP</tspan></text></g><defs><marker id="arrowhead" refX="5" refY="2" markerWidth="6" markerHeight="4" orient="auto"><path d="M 0,0 V 4 L6,2 Z"></path></marker></defs><defs><marker id="crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="16" refY="4"><path fill="black" stroke="#000000" stroke-width="1px" d="M 9,2 V 6 L16,4 Z" style="stroke-dasharray: 0, 0;"></path><path fill="none" stroke="#000000" stroke-width="1px" d="M 0,1 L 6,7 M 6,1 L 0,7" style="stroke-dasharray: 0, 0;"></path></marker></defs><g><text x="175" y="118" class="messageText" style="text-anchor: middle;">GET /employees</text><line x1="75" y1="125" x2="275" y2="125" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></line></g><g><text x="175" y="173" class="messageText" style="text-anchor: middle;">GET /employees/{id:int}</text><line x1="75" y1="180" x2="275" y2="180" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></line></g><g><text x="175" y="228" class="messageText" style="text-anchor: middle;">POST /employees</text><line x1="75" y1="235" x2="275" y2="235" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></line></g><g><text x="175" y="283" class="messageText" style="text-anchor: middle;">PUT /employees/{id:int}</text><line x1="75" y1="290" x2="275" y2="290" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></line></g><g><text x="175" y="338" class="messageText" style="text-anchor: middle;">DELETE /employees/{id:int}</text><line x1="75" y1="345" x2="275" y2="345" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></line></g><g><rect x="270" y="347" fill="#EDF2AE" stroke="#666" width="10" height="413" rx="0" ry="0" class="activation0"></rect></g><g><line x1="65" y1="75" x2="285" y2="75" class="loopLine"></line><line x1="285" y1="75" x2="285" y2="355" class="loopLine"></line><line x1="65" y1="355" x2="285" y2="355" class="loopLine"></line><line x1="65" y1="75" x2="65" y2="355" class="loopLine"></line><line x1="65" y1="135" x2="285" y2="135" class="loopLine" style="stroke-dasharray: 3, 3;"></line><line x1="65" y1="190" x2="285" y2="190" class="loopLine" style="stroke-dasharray: 3, 3;"></line><line x1="65" y1="245" x2="285" y2="245" class="loopLine" style="stroke-dasharray: 3, 3;"></line><line x1="65" y1="300" x2="285" y2="300" class="loopLine" style="stroke-dasharray: 3, 3;"></line><polygon points="65,75 115,75 115,88 106.6,95 65,95" class="labelBox"></polygon><text x="72.5" y="90" fill="black" class="labelText"><tspan x="72.5" fill="black">alt</tspan></text><text x="175" y="90" fill="black" class="loopText" style="text-anchor: middle;"><tspan x="175" fill="black">[ get all employees ]</tspan></text><text x="175" y="150" fill="black" class="loopText" style="text-anchor: middle;"><tspan x="175" fill="black">[ get employee by id ]</tspan></text><text x="175" y="205" fill="black" class="loopText" style="text-anchor: middle;"><tspan x="175" fill="black">[ create employee  ]</tspan></text><text x="175" y="260" fill="black" class="loopText" style="text-anchor: middle;"><tspan x="175" fill="black">[ update employee by id ]</tspan></text><text x="175" y="315" fill="black" class="loopText" style="text-anchor: middle;"><tspan x="175" fill="black">[ delete employee by id ]</tspan></text></g><g><text x="280" y="408" class="messageText" style="text-anchor: middle;">JSON to SOAP</text><path d="M 280,415 C 340,405 340,445 280,435" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></path></g><g><line x1="170" y1="365" x2="390" y2="365" class="loopLine"></line><line x1="390" y1="365" x2="390" y2="455" class="loopLine"></line><line x1="170" y1="455" x2="390" y2="455" class="loopLine"></line><line x1="170" y1="365" x2="170" y2="455" class="loopLine"></line><polygon points="170,365 220,365 220,378 211.6,385 170,385" class="labelBox"></polygon><text x="177.5" y="380" fill="black" class="labelText"><tspan x="177.5" fill="black">alt</tspan></text><text x="280" y="380" fill="black" class="loopText" style="text-anchor: middle;"><tspan x="280" fill="black">[ mapping ]</tspan></text></g><g><text x="377.5" y="483" class="messageText" style="text-anchor: middle;">SOAP request</text><line x1="280" y1="490" x2="475" y2="490" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></line></g><g><rect x="470" y="492" fill="#EDF2AE" stroke="#666" width="10" height="133" rx="0" ry="0" class="activation0"></rect></g><g><text x="480" y="543" class="messageText" style="text-anchor: middle;">get, create, update and delete</text><path d="M 480,550 C 540,540 540,580 480,570" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></path></g><g><line x1="370" y1="500" x2="590" y2="500" class="loopLine"></line><line x1="590" y1="500" x2="590" y2="590" class="loopLine"></line><line x1="370" y1="590" x2="590" y2="590" class="loopLine"></line><line x1="370" y1="500" x2="370" y2="590" class="loopLine"></line><polygon points="370,500 420,500 420,513 411.6,520 370,520" class="labelBox"></polygon><text x="377.5" y="515" fill="black" class="labelText"><tspan x="377.5" fill="black">alt</tspan></text><text x="480" y="515" fill="black" class="loopText" style="text-anchor: middle;"><tspan x="480" fill="black">[ rpc ]</tspan></text></g><g><text x="375" y="618" class="messageText" style="text-anchor: middle;">SOAP result</text><line x1="470" y1="625" x2="280" y2="625" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="stroke-dasharray: 3, 3; fill: none;"></line></g><g><text x="280" y="678" class="messageText" style="text-anchor: middle;">SOAP to JSON</text><path d="M 280,685 C 340,675 340,715 280,705" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></path></g><g><line x1="170" y1="635" x2="390" y2="635" class="loopLine"></line><line x1="390" y1="635" x2="390" y2="725" class="loopLine"></line><line x1="170" y1="725" x2="390" y2="725" class="loopLine"></line><line x1="170" y1="635" x2="170" y2="725" class="loopLine"></line><polygon points="170,635 220,635 220,648 211.6,655 170,655" class="labelBox"></polygon><text x="177.5" y="650" fill="black" class="labelText"><tspan x="177.5" fill="black">alt</tspan></text><text x="280" y="650" fill="black" class="loopText" style="text-anchor: middle;"><tspan x="280" fill="black">[ mapping ]</tspan></text></g><g><text x="172.5" y="753" class="messageText" style="text-anchor: middle;">http result</text><line x1="270" y1="760" x2="75" y2="760" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="stroke-dasharray: 3, 3; fill: none;"></line></g><g><rect x="50" y="770" fill="#EDF2AE" stroke="#666" width="250" height="84" rx="0" ry="0" class="note"></rect><text x="46" y="794" fill="black" class="noteText"><tspan x="66" fill="black">payload: JSON</tspan></text><text x="46" y="810" fill="black" class="noteText"><tspan x="66" fill="black">http status: 200 OK, 201 Created,</tspan></text><text x="46" y="826" fill="black" class="noteText"><tspan x="66" fill="black">202 Accepted, 404 Not Found,</tspan></text><text x="46" y="842" fill="black" class="noteText"><tspan x="66" fill="black">405 Method not allowed</tspan></text></g><g><rect x="500" y="864" fill="#EDF2AE" stroke="#666" width="150" height="36" rx="0" ry="0" class="note"></rect><text x="496" y="888" fill="black" class="noteText"><tspan x="516" fill="black">legacy role</tspan></text></g><g><rect x="250" y="910" fill="#EDF2AE" stroke="#666" width="250" height="36" rx="0" ry="0" class="note"></rect><text x="246" y="934" fill="black" class="noteText"><tspan x="266" fill="black">IBM Integration Bus</tspan></text></g><g><rect x="0" y="966" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="998.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;"><tspan x="75" dy="0">CLIENT</tspan></text></g><g><rect x="200" y="966" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="275" y="998.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;"><tspan x="275" dy="0">API</tspan></text></g><g><rect x="400" y="966" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="475" y="998.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;"><tspan x="475" dy="0">SOAP</tspan></text></g></svg>
