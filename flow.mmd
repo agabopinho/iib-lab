@@ -1,0 +1,24 @@
+sequenceDiagram
+    alt get all employees
+        Client->>Api: GET /employees
+    else get employee by id
+        Client->>Api: GET /employees/{id:int}
+    else create employee 
+        Client->>Api: POST /employees
+    else update employee by id
+        Client->>Api: PUT /employees/{id:int}
+    else delete employee by id
+        Client->>+Api: DELETE /employees/{id:int}
+    end
+    alt mapping
+        Api->>Api: JSON to SOAP
+    end
+    Api->>+Soap: call soap (rpc)
+    Soap-->>Soap: search/update IIB Cache
+    Soap-->>-Api: return result
+    alt mapping
+        Api->>Api: SOAP to JSON
+    end
+    Api-->>-Client: 200 Ok, 201 Created, 202 Accepted, 404 Not Found
+    Note right of Soap: legacy
+    Note over Api,Soap: IBM Integration Bus
