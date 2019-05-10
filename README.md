@@ -12,9 +12,11 @@
   "lastName": string,
   "birthDate": date,
   "contracts: [
-    "startDate": date,
-    "endDate": date,
-    "role": string
+    {
+      "startDate": date,
+      "endDate": date,
+      "role": string
+    }
   ]
 }
 ```
