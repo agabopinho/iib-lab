@@ -1,0 +1,32 @@
+BROKER SCHEMA gen
+
+
+CREATE COMPUTE MODULE Criar_Request_Response_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		-- CALL CopyEntireMessage();
+		
+		DECLARE lasId INTEGER CARDINALITY(CACHE.Funcionarios[]);
+		DECLARE newId INTEGER last + 1;
+		
+		SET CACHE.Funcionarios[newId] = InputRoot.XMLNSC.ns:Criar.ns:funcionario;
+		SET CACHE.Funcionarios[newId].ns:IdFuncionario = newId;
+		
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;
