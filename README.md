@@ -8,14 +8,14 @@
 ```json
 {
   "id": int,
-  "firtName": string,
-  "lastName": string,
-  "birthDate": date,
+  "firtName": "string",
+  "lastName": "string",
+  "birthDate": "date",
   "contracts: [
     {
-      "startDate": date,
-      "endDate": date,
-      "role": string
+      "startDate": "date",
+      "endDate": "date",
+      "role": "string"
     }
   ]
 }
