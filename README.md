@@ -1,3 +1,3 @@
 # iib-lab
 
-<img src="flow.png" alt="flow diagram" style="max-width:100%;" />
+<img src="flow.svg" alt="flow diagram" style="max-width:100%;" />
