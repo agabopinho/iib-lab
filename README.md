@@ -7,6 +7,14 @@
 
 ```json
 {
-  "name": string,
+  "id": int,
+  "firtName": string,
+  "lastName": string,
+  "birthDate": date,
+  "contracts: [
+    "startDate": date,
+    "endDate": date,
+    "role": string
+  ]
 }
 ```
