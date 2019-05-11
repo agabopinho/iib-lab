@@ -1,0 +1,5 @@
+mqsistop NODE_LOCAL
+mqsichangebroker NODE_LOCAL -b none  
+mqsichangebroker NODE_LOCAL -b default 
+mqsistart NODE_LOCAL
+

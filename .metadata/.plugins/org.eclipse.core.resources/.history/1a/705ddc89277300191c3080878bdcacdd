@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service:services xmlns:service="http://com.ibm.etools.mft.service">
+  <service:service implementation="gen/IIBLabIntegrationServicde.msgflow" name="IIBLabIntegrationServicde" portType="IFuncionarioServico" wsdlFileName="../IIBLabInterfaces/FuncionarioServico.wsdl">
+    <service:operations>
+      <service:operation name="BuscarTodos" type="request-response">
+        <service:flows/>
+      </service:operation>
+      <service:operation name="BuscarPorId" type="request-response">
+        <service:flows/>
+      </service:operation>
+      <service:operation name="Criar" type="request-response">
+        <service:flows/>
+      </service:operation>
+      <service:operation name="Atualizar" type="request-response">
+        <service:flows/>
+      </service:operation>
+      <service:operation name="Deletar" type="request-response">
+        <service:flows/>
+      </service:operation>
+    </service:operations>
+    <service:errors>
+      <service:flows>
+        <service:flow location="gen/IIBLabIntegrationServicdeInputFailureHandler.subflow" type="Failure"/>
+        <service:flow location="gen/IIBLabIntegrationServicdeInputCatchHandler.subflow" type="Catch"/>
+        <service:flow location="gen/IIBLabIntegrationServicdeInputHTTPTimeoutHandler.subflow" type="Timeout"/>
+      </service:flows>
+    </service:errors>
+  </service:service>
+</service:services>
