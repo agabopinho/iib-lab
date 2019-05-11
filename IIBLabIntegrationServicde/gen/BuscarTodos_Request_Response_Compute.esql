@@ -41,8 +41,8 @@ CREATE COMPUTE MODULE BuscarTodos_Request_Response_Compute
 		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:DataInicio = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
 		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:DataNascimento = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
 		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:IdFuncionario = 3;
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:Nome = 'Dev3';
 		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:SobreNome = 'Tech';
+		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:Nome = 'Dev3';
          
         -- cache
   		SET CACHE.Funcionarios[] = OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[];

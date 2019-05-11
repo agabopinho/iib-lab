@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="gen" version="8.0.5.0" xmlns:map="gen">
+    <input path="mbsharedlib://IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd"/>
+    <output path="mbsharedlib://IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="io" uri="http://indracompany.com/funcionario"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="BuscarTodos_Request_Response_Mapping">
+        <input namespace="http://indracompany.com/funcionario" path="mb:msg(BuscarTodosResponse,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_BuscarTodosResponse"/>
+        <output namespace="http://indracompany.com/funcionario" path="mb:msg(BuscarTodosResponse,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_BuscarTodosResponse1"/>
+        <move>
+            <input path="$ComIbmMessageAssembly_BuscarTodosResponse/Properties"/>
+            <output path="$ComIbmMessageAssembly_BuscarTodosResponse1/Properties"/>
+            <override>
+                <assign value="{IIBLabInterfaces}">
+                    <output path="$ComIbmMessageAssembly_BuscarTodosResponse1/Properties/MessageSet"/>
+                </assign>
+            </override>
+        </move>
+        <foreach>
+            <input path="$ComIbmMessageAssembly_BuscarTodosResponse/BuscarTodosResponse/BuscarTodosResult/Funcionario"/>
+            <output path="$ComIbmMessageAssembly_BuscarTodosResponse1/BuscarTodosResponse/BuscarTodosResult/Funcionario"/>
+            <move>
+                <input path="Cargo"/>
+                <output path="Cargo"/>
+            </move>
+            <move>
+                <input path="DataFim"/>
+                <output path="DataFim"/>
+            </move>
+            <move>
+                <input path="DataInicio"/>
+                <output path="DataInicio"/>
+            </move>
+            <move>
+                <input path="DataNascimento"/>
+                <output path="DataNascimento"/>
+            </move>
+            <move>
+                <input path="IdFuncionario"/>
+                <output path="IdFuncionario"/>
+            </move>
+            <move>
+                <input path="IdPessoa"/>
+                <output path="IdPessoa"/>
+            </move>
+            <move>
+                <input path="Nome"/>
+                <output path="Nome"/>
+            </move>
+            <move>
+                <input path="SobreNome"/>
+                <output path="SobreNome"/>
+            </move>
+        </foreach>
+    </mappingDeclaration>
+</mappingRoot>
