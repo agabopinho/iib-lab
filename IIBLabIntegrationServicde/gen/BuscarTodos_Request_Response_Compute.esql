@@ -1,52 +1,20 @@
 BROKER SCHEMA gen
 DECLARE ns NAMESPACE 'http://indracompany.com/funcionario';
 
-DECLARE CACHE SHARED ROW;
-
 CREATE COMPUTE MODULE BuscarTodos_Request_Response_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
-		-- CALL CopyMessageHeaders();
-		-- CALL CopyEntireMessage();
+		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[] = (
+			SELECT  CAST(F.id_funcionario AS INTEGER) AS ns:IdFuncionario,
+					F.NOME AS ns:Nome,
+					F.SOBRENOME AS ns:Sobrenome,
+					F.DATA_NASCIMENTO AS ns:DataNascimento,
+					F.DATA_INICIO AS ns:DataInicio,
+					F.DATA_FIM AS ns:DataFim,
+					F.CARGO as ns:Cargo
+			FROM Database.FUNCIONARIOS AS F
+		);
 		
-		IF FIELDNAME(CACHE.Funcionarios.*[1]) IS NOT NULL THEN			
-			-- leitura do cache
-			SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[] = (
-				SELECT A
-				FROM CACHE.Funcionarios[] AS A
-			);
-
-			RETURN TRUE;
-		END IF;
-		
-		-- mock do resultado, depois grava no cache
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[1].ns:Cargo = 'Dev';
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[1].ns:DataFim = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[1].ns:DataInicio = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[1].ns:DataNascimento = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[1].ns:IdFuncionario = 1;
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[1].ns:Nome = 'Dev1';
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[1].ns:SobreNome = 'Tech';
-		
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[2].ns:Cargo = 'Dev';
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[2].ns:DataFim = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[2].ns:DataInicio = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[2].ns:DataNascimento = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[2].ns:IdFuncionario = 2;
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[2].ns:Nome = 'Dev2';
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[2].ns:SobreNome = 'Tech';
-		
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:Cargo = 'Dev';
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:DataFim = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:DataInicio = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:DataNascimento = CAST('2019-01-01 00:00:00' AS TIMESTAMP FORMAT 'yyyy-MM-dd HH:mm:ss');
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:IdFuncionario = 3;
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:SobreNome = 'Tech';
-		SET OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[3].ns:Nome = 'Dev3';
-         
-        -- cache
-  		SET CACHE.Funcionarios[] = OutputRoot.XMLNSC.ns:BuscarTodosResponse.ns:BuscarTodosResult.ns:Funcionario[];
-  		
 		RETURN TRUE;
 	END;
 

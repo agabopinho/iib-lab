@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.9.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:OracleModel="http:///com/ibm/db/models/oracle/oracle.ecore" xmlns:SQLConstraints="http:///org/eclipse/datatools/modelbase/sql/constraints.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore" xmlns:SQLSchema="http:///org/eclipse/datatools/modelbase/sql/schema.ecore">
+  <OracleModel:OracleDatabase xmi:id="_kK39IHRTEema1a4tBurHiQ" name="xe" vendor="Oracle" version="11" schemas="_kNLqQHRTEema1a4tBurHiQ">
+    <eAnnotations xmi:id="_kK39IXRTEema1a4tBurHiQ" source="ConnectionURI">
+      <details xmi:id="_kK39InRTEema1a4tBurHiQ" key="ConnectionKey" value="xe"/>
+    </eAnnotations>
+  </OracleModel:OracleDatabase>
+  <SQLSchema:Schema xmi:id="_kNLqQHRTEema1a4tBurHiQ" name="IIB_LAB" tables="_kNLqQXRTEema1a4tBurHiQ" database="_kK39IHRTEema1a4tBurHiQ"/>
+  <OracleModel:OracleTable xmi:id="_kNLqQXRTEema1a4tBurHiQ" name="FUNCIONARIOS" schema="_kNLqQHRTEema1a4tBurHiQ" PCTFree="10" PCTUsed="40" initTrans="1" maxTrans="255">
+    <columns xmi:id="_kNLqQnRTEema1a4tBurHiQ" name="ID_FUNCIONARIO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:FixedPrecisionDataType" xmi:id="_kNLqQ3RTEema1a4tBurHiQ" name="NUMBER" primitiveType="NUMERIC"/>
+    </columns>
+    <columns xmi:id="_kNLqRHRTEema1a4tBurHiQ" name="NOME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_kNLqRXRTEema1a4tBurHiQ" name="VARCHAR2" primitiveType="CHARACTER_VARYING" length="100"/>
+    </columns>
+    <columns xmi:id="_kNLqRnRTEema1a4tBurHiQ" name="SOBRENOME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_kNLqR3RTEema1a4tBurHiQ" name="VARCHAR2" primitiveType="CHARACTER_VARYING" length="100"/>
+    </columns>
+    <columns xmi:id="_kNLqSHRTEema1a4tBurHiQ" name="DATA_NASCIMENTO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="_kNLqSXRTEema1a4tBurHiQ" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <columns xmi:id="_kNLqSnRTEema1a4tBurHiQ" name="CARGO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_kNLqS3RTEema1a4tBurHiQ" name="VARCHAR2" primitiveType="CHARACTER_VARYING" length="100"/>
+    </columns>
+    <columns xmi:id="_kNLqTHRTEema1a4tBurHiQ" name="DATA_INICIO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="_kNLqTXRTEema1a4tBurHiQ" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <columns xmi:id="_kNLqTnRTEema1a4tBurHiQ" name="DATA_FIM">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="_kNLqT3RTEema1a4tBurHiQ" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_kNLqUHRTEema1a4tBurHiQ" name="PK_FUNCIONARIOS" members="_kNLqQnRTEema1a4tBurHiQ"/>
+    <properties xmi:id="_kNLqUXRTEema1a4tBurHiQ" initialExtent="64" initialExtentUnits="K" nextExtent="1" nextExtentUnits="M" minimumExtents="1" maximumExtents="2147483645" freelists="1" freelistGroups="1" bufferpool="DEFAULT"/>
+  </OracleModel:OracleTable>
+</xmi:XMI>

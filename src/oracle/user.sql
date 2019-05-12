@@ -1,11 +1,12 @@
-create user "iib-lab" identified by 123;
+create user iib_lab identified by 123;
 
-grant create session to "iib-lab";
-grant create table to "iib-lab";
-grant create view to "iib-lab";
-grant create any trigger to "iib-lab";
-grant create any procedure to "iib-lab";
-grant create sequence to "iib-lab";
-grant create synonym to "iib-lab";
+grant create session to iib_lab;
+grant create table to iib_lab;
+grant create view to iib_lab;
+grant create any trigger to iib_lab;
+grant create any procedure to iib_lab;
+grant create sequence to iib_lab;
+grant create synonym to iib_lab;
 
-alter user "iib-lab" quota unlimited on  system;
+alter user iib_lab quota unlimited on  system;
+

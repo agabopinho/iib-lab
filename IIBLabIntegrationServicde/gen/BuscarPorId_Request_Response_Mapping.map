@@ -2,7 +2,7 @@
     <input path="mbsharedlib://IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd"/>
     <output path="mbsharedlib://IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd"/>
     <namespaces>
-        <namespace kind="supplement" prefix="in" uri="http://indracompany.com/funcionario"/>
+        <namespace kind="supplement" prefix="io" uri="http://indracompany.com/funcionario"/>
     </namespaces>
     <generation engine="xquery"/>
     <mappingDeclaration name="BuscarPorId_Request_Response_Mapping">
@@ -18,39 +18,39 @@
             </override>
         </move>
         <foreach>
-            <input path="$MessageAssembly/BuscarPorIdResponse/BuscarPorIdResult/Funcionario" var="Funcionario"/>
+            <input path="$MessageAssembly/BuscarPorIdResponse/BuscarPorIdResult/Funcionario"/>
             <output path="$MessageAssembly1/BuscarPorIdResponse/BuscarPorIdResult/Funcionario"/>
             <move>
-                <input path="$Funcionario/Cargo"/>
+                <input path="Cargo"/>
                 <output path="Cargo"/>
             </move>
             <move>
-                <input path="$Funcionario/DataFim"/>
+                <input path="DataFim"/>
                 <output path="DataFim"/>
             </move>
             <move>
-                <input path="$Funcionario/DataInicio"/>
+                <input path="DataInicio"/>
                 <output path="DataInicio"/>
             </move>
             <move>
-                <input path="$Funcionario/DataNascimento"/>
+                <input path="DataNascimento"/>
                 <output path="DataNascimento"/>
             </move>
             <move>
-                <input path="$Funcionario/IdFuncionario"/>
+                <input path="IdFuncionario"/>
                 <output path="IdFuncionario"/>
             </move>
             <move>
-                <input path="$Funcionario/IdPessoa"/>
+                <input path="IdPessoa"/>
                 <output path="IdPessoa"/>
             </move>
             <move>
-                <input path="$Funcionario/Nome"/>
+                <input path="Nome"/>
                 <output path="Nome"/>
             </move>
             <move>
-                <input path="$Funcionario/SobreNome"/>
-                <output path="SobreNome"/>
+                <input path="Sobrenome"/>
+                <output path="Sobrenome"/>
             </move>
         </foreach>
     </mappingDeclaration>

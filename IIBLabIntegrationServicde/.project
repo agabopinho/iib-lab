@@ -3,6 +3,7 @@
 	<name>IIBLabIntegrationServicde</name>
 	<comment></comment>
 	<projects>
+		<project>IIBLabOracle11Xe</project>
 		<project>IIBLabInterfaces</project>
 	</projects>
 	<buildSpec>

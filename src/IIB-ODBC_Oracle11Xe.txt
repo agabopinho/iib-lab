@@ -1,0 +1,5 @@
+-- create security
+mqsisetdbparms LOCAL_NODE -n IIB_Oracle11Xe -u iib_lab -p 123
+
+-- delete security
+mqsisetdbparms LOCAL_NODE -n IIB_Oracle11Xe -d

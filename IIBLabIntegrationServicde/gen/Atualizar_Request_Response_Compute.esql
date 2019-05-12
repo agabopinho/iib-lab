@@ -1,0 +1,38 @@
+BROKER SCHEMA gen
+
+
+CREATE COMPUTE MODULE Atualizar_Request_Response_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE input REFERENCE TO InputRoot.XMLNSC.ns:Atualizar.ns:funcionario;
+		
+		-- TODO: verificar se existe; modificar contrato de resposta
+		
+		UPDATE Database.FUNCIONARIOS AS F
+		SET NOME = input.ns:Nome,
+			SOBRENOME = input.ns:Sobrenome, 
+			CARGO = input.ns:Cargo, 
+			DATA_NASCIMENTO = input.ns:DataNascimento, 
+			DATA_INICIO = input.ns:DataInicio, 
+			DATA_FIM = input.ns:DataFim
+		WHERE F.ID_FUNCIONARIO = input.ns:IdFuncionario;
+		
+		SET OutputRoot.XMLNSC.ns:AtualizarResponse.ns:AtualizarResult VALUE = NULL;
+		
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

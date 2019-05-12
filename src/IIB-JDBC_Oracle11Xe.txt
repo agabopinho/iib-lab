@@ -1,0 +1,17 @@
+-- create jdbc
+mqsicreateconfigurableservice LOCAL_NODE -c JDBCProviders -o xe -n connectionUrlFormat,connectionUrlFormatAttr1,description,jarsURL,portNumber,securityIdentity,serverName,type4DatasourceClassName,type4DriverClassName -v "jdbc:oracle:thin:[user]/[password]@[serverName]:[portNumber]:[connectionUrlFormatAttr1],"XE","default_none","D:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib",1521,"XE_SecurityId","localhost","oracle.jdbc.xa.client.OracleXADataSource","oracle.jdbc.OracleDriver"
+
+-- create security
+mqsisetdbparms LOCAL_NODE -n jdbc::XE_SecurityId -u iib_lab -p 123
+
+-- stop/star
+mqsistop LOCAL_NODE
+mqsistart LOCAL_NODE
+
+-- delete jdbc
+mqsideleteconfigurableservice LOCAL_NODE -c JDBCProviders -o xe
+
+-- delete security
+mqsisetdbparms LOCAL_NODE -n jdbc::XE_SecurityId -d
+
+

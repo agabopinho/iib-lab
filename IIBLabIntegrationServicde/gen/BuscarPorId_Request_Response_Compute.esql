@@ -4,18 +4,19 @@ BROKER SCHEMA gen
 CREATE COMPUTE MODULE BuscarPorId_Request_Response_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
-		-- CALL CopyMessageHeaders();
-		-- CALL CopyEntireMessage();
-		
-		-- SET OutputRoot.XMLNSC.ns:BuscarPorIdResponse.ns:BuscarPorIdResult.ns:Funcionario = CACHE.Funcionarios[1];
-		
-		SET Environment.Variables.Query[] = (
-			SELECT A
-			FROM CACHE.Funcionarios[] AS A
-			WHERE A.ns:IdFuncionario = InputRoot.XMLNSC.ns:BuscarPorId.ns:id
+		DECLARE input REFERENCE TO InputBody.ns:BuscarPorId;
+
+		SET OutputRoot.XMLNSC.ns:BuscarPorIdResponse.ns:BuscarPorIdResult.ns:Funcionario[] = (
+			SELECT  CAST(F.id_funcionario AS INTEGER) AS ns:IdFuncionario,
+					F.NOME AS ns:Nome,
+					F.SOBRENOME AS ns:Sobrenome,
+					F.DATA_NASCIMENTO AS ns:DataNascimento,
+					F.DATA_INICIO AS ns:DataInicio,
+					F.DATA_FIM AS ns:DataFim,
+					F.CARGO as ns:Cargo
+			FROM Database.FUNCIONARIOS AS F
+			WHERE F.ID_FUNCIONARIO = input.ns:id
 		);
-		
-		SET OutputRoot.XMLNSC.ns:BuscarPorIdResponse.ns:BuscarPorIdResult.ns:Funcionario = Environment.Variables.Query[1];
 		
 		RETURN TRUE;
 	END;

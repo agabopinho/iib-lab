@@ -4,21 +4,32 @@ BROKER SCHEMA gen
 CREATE COMPUTE MODULE Criar_Request_Response_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
-		-- CALL CopyMessageHeaders();
-		-- CALL CopyEntireMessage();
+		DECLARE input REFERENCE TO InputRoot.XMLNSC.ns:Criar.ns:funcionario;
+		DECLARE id INTEGER;
 		
-		DECLARE lastIndex INTEGER CARDINALITY(CACHE.Funcionarios[]);
-		DECLARE newId INTEGER lastIndex + 1;
+		INSERT INTO Database.FUNCIONARIOS (
+			NOME, 
+			SOBRENOME, 
+			CARGO, 
+			DATA_NASCIMENTO, 
+			DATA_INICIO, 
+			DATA_FIM
+		)
+		VALUES (
+			input.ns:Nome, 
+			input.ns:Sobrenome, 
+			input.ns:Cargo, 
+			input.ns:DataNascimento, 
+			input.ns:DataInicio, 
+			input.ns:DataFim
+		);
+
+		SET Environment.Variables.Result[] = PASSTHRU('
+			SELECT MAX (ID_FUNCIONARIO) AS ID
+			FROM FUNCIONARIOS
+		');
 		
-		SET CACHE.Funcionarios[newId].ns:Cargo = InputRoot.XMLNSC.ns:Criar.ns:funcionario.ns:Cargo;
-		SET CACHE.Funcionarios[newId].ns:DataFim = InputRoot.XMLNSC.ns:Criar.ns:funcionario.ns:DataFim;
-		SET CACHE.Funcionarios[newId].ns:DataInicio = InputRoot.XMLNSC.ns:Criar.ns:funcionario.ns:DataInicio;
-		SET CACHE.Funcionarios[newId].ns:DataNascimento = InputRoot.XMLNSC.ns:Criar.ns:funcionario.ns:DataNascimento;
-		SET CACHE.Funcionarios[newId].ns:IdFuncionario = newId;
-		SET CACHE.Funcionarios[newId].ns:Nome = InputRoot.XMLNSC.ns:Criar.ns:funcionario.ns:Nome;
-		SET CACHE.Funcionarios[newId].ns:SobreNome = InputRoot.XMLNSC.ns:Criar.ns:funcionario.ns:SobreNome;
-		
-		SET OutputRoot.XMLNSC.ns:CriarResponse.ns:CriarResult = newId;
+		SET OutputRoot.XMLNSC.ns:CriarResponse.ns:CriarResult = CAST(Environment.Variables.Result[1].ID AS INTEGER);
 		
 		RETURN TRUE;
 	END;

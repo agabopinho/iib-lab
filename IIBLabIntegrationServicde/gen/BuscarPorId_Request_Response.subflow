@@ -12,7 +12,7 @@
       <nodes xmi:type="eflow:FCMSink" xmi:id="OutTerminal.Output" location="320,20">
         <translation xmi:type="utility:TranslatableString" key="OutTerminal.Output" bundleName="gen/BuscarPorId_Request_Response" pluginId="IIBLabIntegrationServicde"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="124,56" computeExpression="esql://routine/gen#BuscarPorId_Request_Response_Compute.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="124,56" dataSource="IIB_Oracle11Xe" connectDatasourceBeforeFlowStarts="true" computeExpression="esql://routine/gen#BuscarPorId_Request_Response_Compute.Main">
         <translation xmi:type="utility:ConstantString" string="Compute"/>
       </nodes>
       <nodes xmi:type="ComIbmMSLMapping.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="227,87" mappingExpression="msl://{gen}#BuscarPorId_Request_Response_Mapping">
