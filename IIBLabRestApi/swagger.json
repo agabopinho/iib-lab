@@ -2,7 +2,8 @@
   "swagger" : "2.0",
   "info" : {
     "version" : "v1",
-    "title" : "WebApplication4"
+    "title" : "WebApplication4",
+    "description" : "REST Api"
   },
   "host" : "localhost:50946",
   "schemes" : [ "http" ],
