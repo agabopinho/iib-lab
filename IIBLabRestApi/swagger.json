@@ -173,5 +173,5 @@
       }
     }
   },
-  "basePath" : "/iib-lab-api/v1"
+  "basePath" : "/iib-lab-api"
 }
