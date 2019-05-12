@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>IIBLabIntegrationService</name>
+	<name>IIBLabSoapService</name>
 	<comment></comment>
 	<projects>
 		<project>Miscellaneous Data Models</project>
-		<project>IIBLabDatabase</project>
 		<project>IIBLabInterfaces</project>
+		<project>IIBLabDatabase</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -4,10 +4,10 @@
       <MRWSDLAppInfo imported="true">
         <generatedXSD location="FuncionarioServico_InlineSchema2.xsd"/>
         <generatedXSD location="FuncionarioServico_InlineSchema1.xsd"/>
+        <binding hasEncoding="false" imported="true" name="BasicHttpBinding_IFuncionarioServico" originalBindingStyle="document"/>
       </MRWSDLAppInfo>
     </wsdl:appinfo>
   </wsdl:documentation>
-  
   <wsdl:types>
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
       <xsd:include schemaLocation="FuncionarioServico_InlineSchema2.xsd"/>
@@ -68,10 +68,10 @@
       <wsdl:output message="tns:IFuncionarioServico_Deletar_OutputMessage" wsaw:Action="http://indracompany.com/funcionario/IFuncionarioServico/DeletarResponse"/>
     </wsdl:operation>
   </wsdl:portType>
-    <wsdl:binding name="IFuncionarioServicoHttpBinding" type="tns:IFuncionarioServico">
-    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+  <wsdl:binding name="BasicHttpBinding_IFuncionarioServico" type="tns:IFuncionarioServico">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="BuscarTodos">
-      <soap:operation soapAction=""/>
+      <soap:operation soapAction="http://indracompany.com/funcionario/IFuncionarioServico/BuscarTodos" style="document"/>
       <wsdl:input>
         <soap:body use="literal"/>
       </wsdl:input>
@@ -80,7 +80,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="BuscarPorId">
-      <soap:operation soapAction=""/>
+      <soap:operation soapAction="http://indracompany.com/funcionario/IFuncionarioServico/BuscarPorId" style="document"/>
       <wsdl:input>
         <soap:body use="literal"/>
       </wsdl:input>
@@ -89,7 +89,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Criar">
-      <soap:operation soapAction=""/>
+      <soap:operation soapAction="http://indracompany.com/funcionario/IFuncionarioServico/Criar" style="document"/>
       <wsdl:input>
         <soap:body use="literal"/>
       </wsdl:input>
@@ -98,7 +98,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Atualizar">
-      <soap:operation soapAction=""/>
+      <soap:operation soapAction="http://indracompany.com/funcionario/IFuncionarioServico/Atualizar" style="document"/>
       <wsdl:input>
         <soap:body use="literal"/>
       </wsdl:input>
@@ -107,7 +107,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Deletar">
-      <soap:operation soapAction=""/>
+      <soap:operation soapAction="http://indracompany.com/funcionario/IFuncionarioServico/Deletar" style="document"/>
       <wsdl:input>
         <soap:body use="literal"/>
       </wsdl:input>
@@ -116,9 +116,9 @@
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
-    <wsdl:service name="IFuncionarioServicoHttpService">
-    <wsdl:port binding="tns:IFuncionarioServicoHttpBinding" name="IFuncionarioServicoHttpPort">
-      <soap:address location="/IIBLabIntegrationService"/>
+  <wsdl:service name="FuncionarioServico">
+    <wsdl:port binding="tns:BasicHttpBinding_IFuncionarioServico" name="BasicHttpBinding_IFuncionarioServico">
+      <soap:address location="http://localhost:61966/FuncionarioServico.svc"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

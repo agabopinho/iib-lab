@@ -6,49 +6,49 @@
     </namespaces>
     <generation engine="xquery"/>
     <mappingDeclaration name="BuscarTodos_Request_Response_Mapping">
-        <input namespace="http://indracompany.com/funcionario" path="mb:msg(BuscarTodosResponse,assembly,XMLNSC,Properties)" var="MessageAssembly"/>
-        <output namespace="http://indracompany.com/funcionario" path="mb:msg(BuscarTodosResponse,assembly,XMLNSC,Properties)" var="MessageAssembly1"/>
+        <input namespace="http://indracompany.com/funcionario" path="mb:msg(BuscarTodosResponse,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_BuscarTodosResponse"/>
+        <output namespace="http://indracompany.com/funcionario" path="mb:msg(BuscarTodosResponse,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_BuscarTodosResponse1"/>
         <move>
-            <input path="$MessageAssembly/Properties"/>
-            <output path="$MessageAssembly1/Properties"/>
+            <input path="$ComIbmMessageAssembly_BuscarTodosResponse/Properties"/>
+            <output path="$ComIbmMessageAssembly_BuscarTodosResponse1/Properties"/>
             <override>
                 <assign value="{IIBLabInterfaces}">
-                    <output path="$MessageAssembly1/Properties/MessageSet"/>
+                    <output path="$ComIbmMessageAssembly_BuscarTodosResponse1/Properties/MessageSet"/>
                 </assign>
             </override>
         </move>
         <foreach>
-            <input path="$MessageAssembly/BuscarTodosResponse/BuscarTodosResult/Funcionario"/>
-            <output path="$MessageAssembly1/BuscarTodosResponse/BuscarTodosResult/Funcionario"/>
-            <move>
+            <input path="$ComIbmMessageAssembly_BuscarTodosResponse/BuscarTodosResponse/BuscarTodosResult/Funcionario"/>
+            <output path="$ComIbmMessageAssembly_BuscarTodosResponse1/BuscarTodosResponse/BuscarTodosResult/Funcionario"/>
+            <move automap="true">
                 <input path="Cargo"/>
                 <output path="Cargo"/>
             </move>
-            <move>
-                <input path="DataInicio"/>
-                <output path="DataInicio"/>
-            </move>
-            <move>
+            <move automap="true">
                 <input path="DataFim"/>
                 <output path="DataFim"/>
             </move>
-            <move>
+            <move automap="true">
+                <input path="DataInicio"/>
+                <output path="DataInicio"/>
+            </move>
+            <move automap="true">
                 <input path="DataNascimento"/>
                 <output path="DataNascimento"/>
             </move>
-            <move>
-                <input path="Nome"/>
-                <output path="Nome"/>
-            </move>
-            <move>
-                <input path="IdPessoa"/>
-                <output path="IdPessoa"/>
-            </move>
-            <move>
+            <move automap="true">
                 <input path="IdFuncionario"/>
                 <output path="IdFuncionario"/>
             </move>
-            <move>
+            <move automap="true">
+                <input path="IdPessoa"/>
+                <output path="IdPessoa"/>
+            </move>
+            <move automap="true">
+                <input path="Nome"/>
+                <output path="Nome"/>
+            </move>
+            <move automap="true">
                 <input path="Sobrenome"/>
                 <output path="Sobrenome"/>
             </move>
