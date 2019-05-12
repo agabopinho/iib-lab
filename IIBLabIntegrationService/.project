@@ -3,8 +3,9 @@
 	<name>IIBLabIntegrationServicde</name>
 	<comment></comment>
 	<projects>
-		<project>IIBLabOracle11Xe</project>
+		<project>Miscellaneous Data Models</project>
 		<project>IIBLabInterfaces</project>
+		<project>IIBLabDatabase</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
