@@ -3,6 +3,7 @@
 	<name>IIBLabRestApi</name>
 	<comment></comment>
 	<projects>
+		<project>IIBLabInterfaces</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

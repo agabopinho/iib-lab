@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/SOAPDomainMsg.xsd" var="var3"/>
+    <input path="mbsharedlib://IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd" var="var2"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var6"/>
+    <output derivedFrom="MB:JSON_schema_in_swagger_document" path="/swagger.json" var="var7"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/iib/msl/json"/>
+        <namespace kind="supplement" prefix="in" uri="http://indracompany.com/funcionario"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="getEmployees_Mapping1">
+        <input path="$var3/mb:msg(SOAP_Domain_Msg,assembly,SOAP,Properties)" var="MessageAssembly">
+            <cast path="$MessageAssembly/SOAP_Domain_Msg/Body/any" qualifier="{http://indracompany.com/funcionario}BuscarTodosResponse" ref="var2"/>
+        </input>
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var6/mb:msg(JSON,assembly,JSON,Properties)" var="MessageAssembly2">
+            <cast derivedFrom="MB:JSON_operation_response" path="$MessageAssembly2/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}EmployeeListModel" ref="var7"/>
+        </output>
+        <foreach>
+            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/BuscarTodosResponse/BuscarTodosResult/Funcionario"/>
+            <output path="$MessageAssembly2/JSON/spath('Data',2)/employees/Item"/>
+            <move>
+                <input path="Cargo"/>
+                <output path="contracts/Item/role"/>
+            </move>
+            <move>
+                <input path="DataFim"/>
+                <output path="contracts/Item/endDate"/>
+            </move>
+            <move>
+                <input path="DataInicio"/>
+                <output path="contracts/Item/startDate"/>
+            </move>
+            <move>
+                <input path="DataNascimento"/>
+                <output path="birthDate"/>
+            </move>
+            <convert defaultValue="0">
+                <input path="IdFuncionario"/>
+                <output path="id"/>
+            </convert>
+            <move>
+                <input path="Nome"/>
+                <output path="firstName"/>
+            </move>
+            <move>
+                <input path="Sobrenome"/>
+                <output path="lastName"/>
+            </move>
+        </foreach>
+    </mappingDeclaration>
+</mappingRoot>

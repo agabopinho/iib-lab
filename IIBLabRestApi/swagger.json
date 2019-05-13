@@ -2,7 +2,7 @@
   "swagger" : "2.0",
   "info" : {
     "version" : "v1",
-    "title" : "WebApplication4",
+    "title" : "Employees Service",
     "description" : "REST Api"
   },
   "host" : "localhost:50946",
@@ -174,5 +174,5 @@
       }
     }
   },
-  "basePath" : "/iib-lab-api"
+  "basePath" : "/employees-service"
 }

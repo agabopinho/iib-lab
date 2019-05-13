@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <output path="mbsharedlib://IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/iib/msl/json"/>
+        <namespace kind="supplement" prefix="out2" uri="http://indracompany.com/funcionario"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="getEmployees_Mapping">
+        <output namespace="http://indracompany.com/funcionario" path="mb:msg(BuscarTodos,assembly,XMLNSC,Properties)" var="MessageAssembly1"/>
+        <create empty="true">
+            <output path="$MessageAssembly1/BuscarTodos"/>
+        </create>
+    </mappingDeclaration>
+</mappingRoot>
