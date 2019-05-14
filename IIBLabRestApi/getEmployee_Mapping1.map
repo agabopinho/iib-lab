@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/SOAPDomainMsg.xsd" var="var7"/>
+    <input path="mbsharedlib://IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd" var="var4"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var5"/>
+    <output derivedFrom="MB:JSON_schema_in_swagger_document" path="/swagger.json" var="var6"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/iib/msl/json"/>
+        <namespace kind="supplement" prefix="in" uri="http://indracompany.com/funcionario"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="getEmployee_Mapping1">
+        <input path="$var7/mb:msg(SOAP_Domain_Msg,assembly,SOAP,Properties)" var="MessageAssembly">
+            <cast path="$MessageAssembly/SOAP_Domain_Msg/Body/any" qualifier="{http://indracompany.com/funcionario}BuscarPorIdResponse" ref="var4"/>
+        </input>
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var5/mb:msg(JSON,assembly,JSON,Properties)" var="MessageAssembly1">
+            <cast derivedFrom="MB:JSON_operation_response" path="$MessageAssembly1/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}EmployeeModel" ref="var6"/>
+        </output>
+        <convert defaultValue="0">
+            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/BuscarPorIdResponse/BuscarPorIdResult/Funcionario/IdFuncionario"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/id"/>
+        </convert>
+        <move>
+            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/BuscarPorIdResponse/BuscarPorIdResult/Funcionario/Nome"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/firstName"/>
+        </move>
+        <move>
+            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/BuscarPorIdResponse/BuscarPorIdResult/Funcionario/Sobrenome"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/lastName"/>
+        </move>
+        <move>
+            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/BuscarPorIdResponse/BuscarPorIdResult/Funcionario/DataNascimento"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/birthDate"/>
+        </move>
+        <move>
+            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/BuscarPorIdResponse/BuscarPorIdResult/Funcionario/Cargo"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/contracts/Item/role"/>
+        </move>
+        <move>
+            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/BuscarPorIdResponse/BuscarPorIdResult/Funcionario/DataInicio"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/contracts/Item/startDate"/>
+        </move>
+        <move>
+            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/BuscarPorIdResponse/BuscarPorIdResult/Funcionario/DataFim"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/contracts/Item/endDate"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

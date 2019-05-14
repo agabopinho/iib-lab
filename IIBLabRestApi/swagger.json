@@ -40,8 +40,11 @@
           }
         } ],
         "responses" : {
-          "204" : {
-            "description" : "No Content"
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "$ref" : "#/definitions/CreateEmployeeResult"
+            }
           }
         }
       }
@@ -94,7 +97,10 @@
         } ],
         "responses" : {
           "204" : {
-            "description" : "No Content"
+            "description" : "No Content",
+            "schema" : {
+              "$ref" : "#/definitions/EmployeeListModel"
+            }
           }
         }
       },
@@ -113,8 +119,8 @@
           "format" : "int32"
         } ],
         "responses" : {
-          "204" : {
-            "description" : "No Content"
+          "200" : {
+            "description" : "Status deleted"
           }
         }
       }
@@ -170,6 +176,14 @@
         },
         "role" : {
           "type" : "string"
+        }
+      }
+    },
+    "CreateEmployeeResult" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer"
         }
       }
     }

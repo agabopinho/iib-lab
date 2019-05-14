@@ -1,0 +1,10 @@
+DECLARE ns NAMESPACE 'http://indracompany.com/funcionario';
+
+
+CREATE FILTER MODULE deleteEmployee_Filter
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		RETURN CAST(Body.ns:DeletarResponse.ns:DeletarResult AS BOOLEAN);
+	END;
+
+END MODULE;

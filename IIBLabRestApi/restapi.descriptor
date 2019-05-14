@@ -6,7 +6,11 @@
         </sharedLibraryReference>
     </references>
     <ns2:operations>
+        <ns2:operation name="createEmployee" implementation="createEmployee.subflow"/>
+        <ns2:operation name="deleteEmployee" implementation="deleteEmployee.subflow"/>
+        <ns2:operation name="getEmployee" implementation="getEmployee.subflow"/>
         <ns2:operation name="getEmployees" implementation="getEmployees.subflow"/>
+        <ns2:operation name="updateEmployee" implementation="updateEmployee.subflow"/>
     </ns2:operations>
     <ns2:errorHandlers/>
 </ns2:restapiDescriptor>

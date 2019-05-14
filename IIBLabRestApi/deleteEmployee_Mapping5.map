@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/SOAPDomainMsg.xsd" var="var3"/>
+    <input path="mbsharedlib://IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd" var="var2"/>
+    <output path="mbsharedlib://IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd"/>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="deleteEmployee_Mapping5">
+        <input path="$var3/mb:msg(SOAP_Domain_Msg,assembly,SOAP,Properties)" var="MessageAssembly">
+            <cast path="$MessageAssembly/SOAP_Domain_Msg/Body/any" qualifier="{http://indracompany.com/funcionario}DeletarResponse" ref="var2"/>
+        </input>
+        <output namespace="http://indracompany.com/funcionario" path="mb:msg(DeletarResponse,assembly,XMLNSC,Properties)" var="MessageAssembly1"/>
+        <move>
+            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/DeletarResponse"/>
+            <output path="$MessageAssembly1/DeletarResponse"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

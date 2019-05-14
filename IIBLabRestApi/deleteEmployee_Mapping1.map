@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <inlinedXMLSchema><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">      
+                     <xsd:element name="id" type="xsd:string"/> 
+</xsd:schema>]]></inlinedXMLSchema>
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var1"/>
+    <input inlinedXMLSchema="true" path="../schema_0.xsd" var="var2"/>
+    <output path="mbsharedlib://IIBLabInterfaces/FuncionarioServico_InlineSchema1.xsd"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="out" uri="http://indracompany.com/funcionario"/>
+        <namespace kind="supplement" prefix="out2" uri="http://www.ibm.com/iib/msl/json"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="deleteEmployee_Mapping1">
+        <input namespace="http://www.ibm.com/iib/msl/json" path="$var1/mb:msg(JSON,assembly,JSON,LocalEnvironment,Properties)" var="MessageAssembly">
+            <cast castType="userDefined" path="$MessageAssembly/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var1"/>
+            <cast castType="userDefined" path="$MessageAssembly/LocalEnvironment/REST/Input/Parameters/any" qualifier="id" ref="var2"/>
+        </input>
+        <output namespace="http://indracompany.com/funcionario" path="mb:msg(Deletar,assembly,XMLNSC,Properties)" var="MessageAssembly2"/>
+        <convert>
+            <input path="$MessageAssembly/LocalEnvironment/REST/Input/Parameters/id"/>
+            <output path="$MessageAssembly2/Deletar/id"/>
+        </convert>
+    </mappingDeclaration>
+</mappingRoot>

@@ -8,8 +8,8 @@ CREATE COMPUTE MODULE BuscarTodos_Request_Response_Compute
 			SELECT  CAST(F.ID_FUNCIONARIO AS INTEGER) AS ns:IdFuncionario,
 					F.NOME AS ns:Nome,
 					F.SOBRENOME AS ns:Sobrenome,
-					F.DATA_NASCIMENTO AS ns:DataNascimento,
 					F.DATA_INICIO AS ns:DataInicio,
+					F.DATA_NASCIMENTO AS ns:DataNascimento,
 					F.DATA_FIM AS ns:DataFim,
 					F.CARGO as ns:Cargo
 			FROM Database.FUNCIONARIOS AS F

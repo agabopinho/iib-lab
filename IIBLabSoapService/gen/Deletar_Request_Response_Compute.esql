@@ -7,10 +7,23 @@ CREATE COMPUTE MODULE Deletar_Request_Response_Compute
 		
 		-- TODO: verificar se existe; modificar contrato de resposta.
 		
+		SET Environment.Variables.Query[] = (
+			SELECT CAST (F.ID_FUNCIONARIO AS INTEGER) AS ID_FUNCIONARIO
+			FROM Database.FUNCIONARIOS AS F
+			WHERE F.ID_FUNCIONARIO = input.ns:id
+		);
+		
+		DECLARE i INTEGER CARDINALITY (Environment.Variables.Query[]);
+		
+		IF i = 0 THEN
+			SET OutputRoot.XMLNSC.ns:DeletarResponse.ns:DeletarResult = false;
+			RETURN TRUE;
+		END IF;
+		
 		DELETE FROM Database.FUNCIONARIOS AS F
 		WHERE F.ID_FUNCIONARIO = input.ns:id;
 		
-		SET OutputRoot.XMLNSC.ns:DeletarResponse.ns:DeletarResult VALUE = NULL;
+		SET OutputRoot.XMLNSC.ns:DeletarResponse.ns:DeletarResult = true;
 		
 		RETURN TRUE;
 	END;
