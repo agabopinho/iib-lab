@@ -1,0 +1,8 @@
+
+CREATE FILTER MODULE updateEmployee_Filter
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		RETURN Root.SOAP.Body.ns:AtualizarResponse.ns:AtualizarResult;
+	END;
+
+END MODULE;

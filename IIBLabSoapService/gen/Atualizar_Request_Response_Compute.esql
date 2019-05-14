@@ -7,6 +7,19 @@ CREATE COMPUTE MODULE Atualizar_Request_Response_Compute
 		
 		-- TODO: verificar se existe; modificar contrato de resposta
 		
+		SET Environment.Variables.Query[] = (
+			SELECT CAST (F.ID_FUNCIONARIO AS INTEGER) AS ID_FUNCIONARIO
+			FROM Database.FUNCIONARIOS AS F
+			WHERE F.ID_FUNCIONARIO = input.ns:IdFuncionario
+		);
+		
+		DECLARE i INTEGER CARDINALITY (Environment.Variables.Query[]);
+		
+		IF i = 0 THEN
+			SET OutputRoot.XMLNSC.ns:AtualizarResponse.ns:AtualizarResult = FALSE;
+			RETURN TRUE;
+		END IF;
+		
 		UPDATE Database.FUNCIONARIOS AS F
 		SET NOME = input.ns:Nome,
 			SOBRENOME = input.ns:Sobrenome, 
@@ -16,7 +29,7 @@ CREATE COMPUTE MODULE Atualizar_Request_Response_Compute
 			DATA_FIM = input.ns:DataFim
 		WHERE F.ID_FUNCIONARIO = input.ns:IdFuncionario;
 		
-		SET OutputRoot.XMLNSC.ns:AtualizarResponse.ns:AtualizarResult VALUE = NULL;
+		SET OutputRoot.XMLNSC.ns:AtualizarResponse.ns:AtualizarResult = TRUE;
 		
 		RETURN TRUE;
 	END;

@@ -3,7 +3,7 @@ CREATE COMPUTE MODULE deleteEmployee_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
 		SET OutputRoot.HTTPReplyHeader."X-Original-HTTP-Status-Code" = 404;
-	
+
 		RETURN TRUE;
 	END;
 

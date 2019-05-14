@@ -97,10 +97,10 @@
         } ],
         "responses" : {
           "204" : {
-            "description" : "No Content",
-            "schema" : {
-              "$ref" : "#/definitions/EmployeeListModel"
-            }
+            "description" : "No Content"
+          },
+          "200" : {
+            "description" : "The operation was successful."
           }
         }
       },

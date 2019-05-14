@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <inlinedXMLSchema><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"> 
+    <xsd:element name="X-Original-HTTP-Status-Code" type="xsd:string"/> 
+</xsd:schema>]]></inlinedXMLSchema>
+    <input derivedFrom="MB:JSON_schema_in_swagger_document" path="/swagger.json" var="var1"/>
+    <input inlinedXMLSchema="true" path="../schema_0.xsd" var="var"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var3"/>
+    <output derivedFrom="MB:JSON_schema_in_swagger_document" path="/swagger.json" var="var4"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="io" uri="http://www.ibm.com/iib/msl/json"/>
+        <namespace kind="supplement" prefix="in" uri="http://indracompany.com/funcionario"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="updateEmployee_Mapping1">
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var3/mb:msg(JSON,assembly,JSON,Properties,HTTPReplyHeader)" var="ComIbmMessageAssembly_JSON1">
+            <cast derivedFrom="MB:JSON_operation_response" path="$ComIbmMessageAssembly_JSON1/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}EmployeeListModel" ref="var4"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON1/HTTPReplyHeader/any" qualifier="X-Original-HTTP-Status-Code" ref="var"/>
+        </output>
+        <assign value="404">
+            <output path="$ComIbmMessageAssembly_JSON1/HTTPReplyHeader/X-Original-HTTP-Status-Code"/>
+            <annotation key="$NON-PERSISTENT" value="1"/>
+        </assign>
+    </mappingDeclaration>
+</mappingRoot>
