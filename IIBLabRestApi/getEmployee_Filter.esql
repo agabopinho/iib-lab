@@ -1,0 +1,6 @@
+CREATE FILTER MODULE getEmployee_Filter
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		RETURN CARDINALITY(Root.SOAP.Body.ns:BuscarPorIdResponse.ns:BuscarPorIdResult[]) > 0;
+	END;
+END MODULE;

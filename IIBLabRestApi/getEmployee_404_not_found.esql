@@ -1,0 +1,9 @@
+
+
+CREATE COMPUTE MODULE getEmployee_404_not_found
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot.HTTPReplyHeader."X-Original-HTTP-Status-Code" = 404;
+		RETURN TRUE;
+	END;
+END MODULE;

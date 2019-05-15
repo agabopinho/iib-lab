@@ -10,7 +10,12 @@
         <ns2:operation name="deleteEmployee" implementation="deleteEmployee.subflow"/>
         <ns2:operation name="getEmployee" implementation="getEmployee.subflow"/>
         <ns2:operation name="getEmployees" implementation="getEmployees.subflow"/>
+        <ns2:operation name="patchId" implementation="patchId.subflow"/>
         <ns2:operation name="updateEmployee" implementation="updateEmployee.subflow"/>
     </ns2:operations>
-    <ns2:errorHandlers/>
+    <ns2:errorHandlers>
+        <ns2:errorHandler type="CATCH" implementation="IIBLabRestApiInputCatchHandler.subflow"/>
+        <ns2:errorHandler type="FAILURE" implementation="IIBLabRestApiInputFailureHandler.subflow"/>
+        <ns2:errorHandler type="TIMEOUT" implementation="IIBLabRestApiInputTimeoutHandler.subflow"/>
+    </ns2:errorHandlers>
 </ns2:restapiDescriptor>
