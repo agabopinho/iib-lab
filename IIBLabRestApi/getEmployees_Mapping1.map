@@ -22,10 +22,10 @@
                 <input path="$Funcionario/Cargo"/>
                 <output path="contracts/Item/role"/>
             </move>
-            <move>
+            <convert>
                 <input path="$Funcionario/DataNascimento"/>
                 <output path="birthDate"/>
-            </move>
+            </convert>
             <move>
                 <input path="$Funcionario/IdFuncionario"/>
                 <output path="id"/>
@@ -38,14 +38,14 @@
                 <input path="$Funcionario/Sobrenome"/>
                 <output path="lastName"/>
             </move>
-            <move>
+            <convert>
                 <input path="$Funcionario/DataInicio"/>
                 <output path="contracts/Item/startDate"/>
-            </move>
-            <move>
+            </convert>
+            <convert>
                 <input path="$Funcionario/DataFim"/>
                 <output path="contracts/Item/endDate"/>
-            </move>
+            </convert>
         </foreach>
     </mappingDeclaration>
 </mappingRoot>

@@ -15,33 +15,37 @@
         <output namespace="http://www.ibm.com/iib/msl/json" path="$var5/mb:msg(JSON,assembly,JSON,Properties)" var="MessageAssembly1">
             <cast derivedFrom="MB:JSON_operation_response" path="$MessageAssembly1/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}EmployeeModel" ref="var6"/>
         </output>
-        <convert defaultValue="0">
-            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/BuscarPorIdResponse/BuscarPorIdResult/Funcionario/IdFuncionario"/>
-            <output path="$MessageAssembly1/JSON/spath('Data',2)/id"/>
-        </convert>
-        <move>
-            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/BuscarPorIdResponse/BuscarPorIdResult/Funcionario/Nome"/>
-            <output path="$MessageAssembly1/JSON/spath('Data',2)/firstName"/>
-        </move>
-        <move>
-            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/BuscarPorIdResponse/BuscarPorIdResult/Funcionario/Sobrenome"/>
-            <output path="$MessageAssembly1/JSON/spath('Data',2)/lastName"/>
-        </move>
-        <move>
-            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/BuscarPorIdResponse/BuscarPorIdResult/Funcionario/DataNascimento"/>
-            <output path="$MessageAssembly1/JSON/spath('Data',2)/birthDate"/>
-        </move>
-        <move>
-            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/BuscarPorIdResponse/BuscarPorIdResult/Funcionario/Cargo"/>
-            <output path="$MessageAssembly1/JSON/spath('Data',2)/contracts/Item/role"/>
-        </move>
-        <move>
-            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/BuscarPorIdResponse/BuscarPorIdResult/Funcionario/DataInicio"/>
-            <output path="$MessageAssembly1/JSON/spath('Data',2)/contracts/Item/startDate"/>
-        </move>
-        <move>
-            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/BuscarPorIdResponse/BuscarPorIdResult/Funcionario/DataFim"/>
-            <output path="$MessageAssembly1/JSON/spath('Data',2)/contracts/Item/endDate"/>
-        </move>
+        <foreach>
+            <input path="$MessageAssembly/SOAP_Domain_Msg/Body/BuscarPorIdResponse/BuscarPorIdResult/Funcionario"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)"/>
+            <move>
+                <input path="Cargo"/>
+                <output path="contracts/Item/role"/>
+            </move>
+            <convert>
+                <input path="DataFim"/>
+                <output path="contracts/Item/endDate"/>
+            </convert>
+            <convert>
+                <input path="DataInicio"/>
+                <output path="contracts/Item/startDate"/>
+            </convert>
+            <convert>
+                <input path="DataNascimento"/>
+                <output path="birthDate"/>
+            </convert>
+            <move>
+                <input path="IdFuncionario"/>
+                <output path="id"/>
+            </move>
+            <move>
+                <input path="Nome"/>
+                <output path="firstName"/>
+            </move>
+            <move>
+                <input path="Sobrenome"/>
+                <output path="lastName"/>
+            </move>
+        </foreach>
     </mappingDeclaration>
 </mappingRoot>
